@@ -27,6 +27,15 @@ export class ActoresService
     this.GuardarTodos(listaActores);
   }
 
+  public AgregarActor(actor: Actor): void
+  {
+    let listaActores: Actor[] = this.BuscarTodos();
+
+    listaActores.push(actor);
+
+    this.GuardarTodos(listaActores);
+  }
+
   public GuardarTodos(actores: Actor[]): void
   {
     this.localActores.setActores(actores);
