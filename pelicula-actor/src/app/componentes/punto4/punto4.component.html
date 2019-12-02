@@ -1,0 +1,4 @@
+<app-buscar-pelicula [peliculas]="peliculas" (existePelicula)="novedadExistePelicula($event)"></app-buscar-pelicula>
+<p *ngIf="getExistePelicula()" style="color: darkgreen">Existe la película</p>
+<p *ngIf="getNoExistePelicula()" style="color: red">No existe la película</p>
+<app-listado [peliculas]="peliculas"></app-listado>
