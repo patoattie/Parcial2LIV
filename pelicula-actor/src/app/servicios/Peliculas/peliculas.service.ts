@@ -23,6 +23,15 @@ export class PeliculasService {
     this.GuardarTodos(listaPeliculas);
   }
 
+  public AgregarPelicula(pelicula: Pelicula): void
+  {
+    let listaPeliculas: Pelicula[] = this.BuscarTodos();
+
+    listaPeliculas.push(pelicula);
+
+    this.GuardarTodos(listaPeliculas);
+  }
+
   public GuardarTodos(peliculas: Pelicula[]): void
   {
     this.localPeliculas.setPeliculas(peliculas);
