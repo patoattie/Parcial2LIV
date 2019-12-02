@@ -5,11 +5,11 @@ import { ActoresService } from '../../../servicios/Actores/actores.service';
 import { Actor } from '../../../clases/actor';
 
 @Component({
-  selector: 'app-abm-producto',
-  templateUrl: './abm-producto.component.html',
-  styleUrls: ['./abm-producto.component.css']
+  selector: 'app-abm-actor',
+  templateUrl: './abm-actor.component.html',
+  styleUrls: ['./abm-actor.component.css']
 })
-export class AbmProductoComponent implements OnInit 
+export class AbmActorComponent implements OnInit 
 {
   public formRegistro: FormGroup;
   private enEspera: boolean; //Muestra u oculta el spinner
@@ -117,6 +117,7 @@ export class AbmProductoComponent implements OnInit
     }
     else
     {
+//console.log(this.formRegistro.value.fecha);
       this.mostrarMsjErrorDatos();
     }
 
