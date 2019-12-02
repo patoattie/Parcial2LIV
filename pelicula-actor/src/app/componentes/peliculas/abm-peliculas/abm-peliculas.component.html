@@ -1,1 +1,30 @@
-<p>abm-peliculas works!</p>
+<form [formGroup]="formRegistro">
+        <div class="container-fluid">
+          <label><b>Nombre</b></label>
+          <input formControlName="nombre" type="text" placeholder="Ingresa el nombre del actor" name="nombreActor" required>
+    
+          <label><b>Apellido</b></label>
+          <input formControlName="apellido" type="text" placeholder="Ingresa el apellido del actor" name="apellidoActor" required>
+    
+          <label><b>Nacionalidad</b></label>
+          <input formControlName="nacionalidad" type="text" placeholder="Nacionalidad del actor" name="nacionalidadActor" required>
+    
+          <label><b>Fecha de Nacimiento</b></label>
+          <input formControlName="fecha" type="date" placeholder="dd/mm/aaaa" name="fechaActor" required>
+    
+          <!-- <div>
+            <label><b>Selecciona una imagen para el producto</b></label>
+          </div>
+          <input formControlName="imagen" type="file" name="img-file" accept="image/png" id="img-file"> -->
+    
+          <div class="clearfix">
+            <!-- <button type="button" (click)="productosService.muestraAbm=false" class="cancelbtn">Me arrepenti</button> -->
+            <button type="button" (click)="registrar()" class="signupbtn">
+              Guardar
+              <i class="fa fa-spinner fa-spin" *ngIf="getEnEspera()"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    
+    

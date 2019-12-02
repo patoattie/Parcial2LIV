@@ -36,4 +36,20 @@ export class PeliculasService {
   {
     this.localPeliculas.setPeliculas(peliculas);
   }
+
+  public CalcularId(): number
+  {
+    let listaPeliculas: Pelicula[] = this.BuscarTodos();
+    let id: number = 0;
+
+    listaPeliculas.forEach((unaPeli) => 
+    {
+      if(unaPeli.id < 9999 && unaPeli.id > id)
+      {
+        id = unaPeli.id;
+      }
+    });
+
+    return id + 1;
+  }
 }
