@@ -18,6 +18,8 @@ import { AbmActorComponent } from './componentes/actor/abm-actor/abm-actor.compo
 import { ListadoActorComponent } from './componentes/actor/listado-actor/listado-actor.component';
 import { Punto6Component } from './componentes/punto6/punto6.component';
 
+import * as $ from 'jquery';
+
 @NgModule({
   declarations: [
     AppComponent,
